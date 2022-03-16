@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.js"></script>
+    <style>
+        html,body {
+            margin: 0;
+        }
+        body {
+            height: 3000px;
+            background-color: #ebeeed;
+        }
+        #scrollTop {
+            width: 55px;
+            height: 55px;
+            background-color:#cbdbd1;
+            text-align: center;
+            line-height: 25px;
+            color: #5f7858;
+            font-weight: bold;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 15px;
+            cursor: pointer;
+            border: solid 1px #5f7858;
+        }
+        #scrollTop:hover{text-decoration: none; color: white; background-color: #364d32;}
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>오른쪽 하단 Top 버튼 Click!</h1>
+    <aside id="scrollTop">
+        ▲
+        <br>
+        Top
+    </aside>
+    <script>
+        $("#scrollTop").click(function(){
+            console.log("click");
+            $("html, body").animate({scrollTop: 0}, 1000);
+        });
+    </script>
+</body>
+</html>
